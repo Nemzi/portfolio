@@ -1,0 +1,198 @@
+::selection {
+    background-color: rgb(10, 16, 45);
+    color: white;
+}
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+    font-family: 'Source Code Pro', monospace;
+}
+
+.hero {
+    grid-area: hero;
+    background: rgb(10, 16, 45);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;  
+    height: 500px;
+    transition: background 10s;
+}
+
+.hero:hover {
+    background: #f2f2f2;
+}
+
+.hero .animatedHeroWords:hover{
+    color: white;
+    cursor: default;
+    -webkit-text-stroke: 2px black;
+}
+
+.animatedHeroWords {
+    color: rgb(10, 16, 45);
+    font-size: 0;
+    line-height: 1.6;
+}
+
+.animatedHeroWords span {
+    font-family: 'Archivo Black', sans-serif;
+    font-size: 50px;
+    display: inline-block;
+    animation: move 10s ease-in-out;
+    
+}
+
+.animatedHeroWordsSmallerFont span {
+    font-size: 30px;
+}
+
+@keyframes move {
+    0% {
+        transform: translate(-30%, 0);
+    }
+    10% {
+        color: #f2f2f2;
+    }
+    25% {
+        color: rgb(10, 16, 45);
+    }
+    50% {
+        text-shadow: 0px 6.25px 12.5px rgb(194, 33, 180);
+    }
+    80% {
+        color: #f2f2f2;
+    }
+    100% {
+        transform: translate(30%, 0);
+    }
+}
+
+.animatedHeroWords span:nth-child(2){
+    animation-delay: 0.2s;
+}
+.animatedHeroWords span:nth-child(3){
+    animation-delay: 0.4s;
+}
+.animatedHeroWords span:nth-child(4){
+    animation-delay: 0.6s;
+}
+.animatedHeroWords span:nth-child(5){
+    animation-delay: 0.8s;
+}
+.animatedHeroWords span:nth-child(6){
+    animation-delay: 1s;
+}
+.animatedHeroWords span:nth-child(7){
+    animation-delay: 1.2s;
+}
+.animatedHeroWords span:nth-child(8){
+    animation-delay: 1.4s;
+}
+.animatedHeroWords span:nth-child(9){
+    animation-delay: 1.6s;
+}
+.animatedHeroWords span:nth-child(10){
+    animation-delay: 1.8s;
+}
+.animatedHeroWords span:nth-child(11){
+    animation-delay: 2s;
+}
+
+.navigationBar {
+    grid-area: navigationBar;
+    background-color: rgb(10, 16, 45);
+    border-radius: 0px 0px 20px 0px;
+    position: sticky;
+    top: 0;
+}
+
+.navigationBar a {
+    color: #f2f2f2;
+    text-align: center;
+    text-decoration: none;
+    font-size: 18px;
+    transition: border-radius 1s,
+                font-size 1s;
+    }
+
+.navigationBar a:hover {
+    background-color: #f2f2f2;
+    color: rgb(10, 16, 45);
+    border-radius: 0px 20px 0px 20px;
+    font-size: 36px;
+}
+
+.navigationBar ul {
+    display: flex;
+    align-items: stretch;
+    justify-content: space-evenly;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+.navigationBar li {
+    display: block;
+    flex: 0 1 auto;
+    list-style-type: none;
+}
+
+.leftSidebar{
+    grid-area: leftSidebar;
+}
+
+.content{
+    grid-area: content;
+    height: 1000px;
+}
+
+.rightSidebar{
+    grid-area: rightSidebar;
+}
+
+.footer{
+    grid-area: footer;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: stretch;
+    background-color: rgb(10, 16, 45);
+    border-radius: 0px 20px 0px 0px;
+    height: 100px;
+}
+
+.fa {
+    padding: 25px;
+    font-size: 45px;
+    text-decoration: none;
+    color: #f2f2f2;
+}
+
+.wrapper {
+    display: grid;
+    grid-template: none;
+    grid-template-areas: 
+    "hero hero hero"
+    "navigationBar navigationBar navigationBar"
+    "leftSidebar content rightSidebar"
+    "footer footer footer";
+}
+
+/* TODO :
+    responsive web design
+    connect social media to footer
+    comment code
+    push changes to github
+
+
+    gradient background
+
+    position: relative;
+    background: rgb(2,0,36);
+    background: linear-gradient(225deg, rgba(2,0,36,1) 0%,
+                                        rgba(10,16,45,1) 33%,
+                                        rgba(7,83,117,1) 66%,
+                                        rgba(0,212,255,1) 100%);
+*/
