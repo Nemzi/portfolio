@@ -4,11 +4,15 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!--Fonts-->
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@300&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap" rel="stylesheet">
+    <!--Favicon-->
     <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">  
+    <!--Css-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="styles.css">
     
@@ -17,21 +21,21 @@
 </head>
 
 <body>
-    <div class="wrapper">
-        <div class="hero" id="home">
-            <div class="animatedHeroWords" id="code">
+    <div class="container-fluid">
+        <div class="d-flex flex-column justify-content-center align-items-center hero" id="home">
+            <div class="user-select-none animatedHeroWords" id="code">
                <span>c</span> 
                <span>o</span> 
                <span>d</span> 
                <span>e</span> 
             </div>
-            <div class="animatedHeroWords animatedHeroWordsSmallerFont" id="with">
+            <div class="user-select-none animatedHeroWords animatedHeroWordsSmallerFont" id="with">
                 <span>w</span> 
                 <span>i</span> 
                 <span>t</span> 
                 <span>h</span> 
             </div>
-            <div class="animatedHeroWords" id="integrity">
+            <div class="user-select-none animatedHeroWords" id="integrity">
                 <span>i</span> 
                 <span>n</span> 
                 <span>t</span> 
@@ -42,12 +46,12 @@
                 <span>t</span> 
                 <span>y</span> 
             </div>
-            <div class="animatedHeroWords animatedHeroWordsSmallerFont" id="and">
+            <div class="user-select-none animatedHeroWords animatedHeroWordsSmallerFont" id="and">
                 <span>a</span>
                 <span>n</span> 
                 <span>d</span> 
             </div>
-            <div class="animatedHeroWords" id="dedication">
+            <div class="user-select-none animatedHeroWords" id="dedication">
                 <span>d</span> 
                 <span>e</span> 
                 <span>d</span> 
@@ -61,16 +65,23 @@
                 <span>.</span> 
             </div>
         </div>
-        
-        <nav class="navigationBar">
-            <ul>
-                <li><a href="#home"> Home </a></li>
-                <li><a href="#myWork"> My work </a></li>
-                <li><a href="#">About</a></li>
-                <li><a href="#contact"> Contact </a></li>
-            </ul>
+
+        <nav class="navbar navbar-expand-lg navbar-dark navigationBar">
+            <a href="#home"><img src="images/house.svg" alt="Home icon" id="homeIcon"></a>
+            <a href="#home">Home</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                <div class="navbar-nav">
+                    <a class="nav-link" href="#myWork">My work</a>
+                    <a class="nav-link" href="#">About</a>
+                    <a class="nav-link" href="#contact">Contact</a>
+                </div>
+              </div>
+            
         </nav>
-        
+
         <div class="content" id="myWork">
             <h2 class="contentHeader" id="validationForm">Validation form</h2>
             <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tenetur consequuntur fuga 
@@ -113,14 +124,16 @@
         </div>
         <footer class="footer" id="contact">
             <div>
-                <a href="#" class="fa fa-envelope"></a>
-                <a href="#" class="fa fa-linkedin"></a>
-                <a href="#" class="fa fa-github"></a>
+                <a href="mailto:nemanja.milan.simic@gmail.com" class="fa fa-envelope"></a>
+                <a href="https://www.linkedin.com/in/nemanja-simi%C4%87-0675bb211/" target="_blank" rel="noopener noreferrer" class="fa fa-linkedin"></a>
+                <a href="https://github.com/Nemzi" target="_blank" rel="noopener noreferrer" class="fa fa-github"></a>
             </div>
         </footer>
     </div>
-    <script>
-    </script>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" 
+    integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
 </body>
 
 
