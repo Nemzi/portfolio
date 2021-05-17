@@ -93,10 +93,21 @@
                 <br><br><br><br><br><br><br><br><br><br>
                 <br><br><br><br><br><br><br><br><br><br>
                 <h2 class="contentHeader" id="">Authentication form</h2>
+                <h3>Pick a character</h3>
+                <div class="dropdown">
+                    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenu2" data-bs-toggle="dropdown" aria-expanded="false">
+                      Dropdown
+                    </button>
+                    <ul class="dropdown-menu" aria-labelledby="dropdownMenu2">
+                      <li><button class="dropdown-item" type="button">Action</button></li>
+                      <li><button class="dropdown-item" type="button">Another action</button></li>
+                      <li><button class="dropdown-item" type="button">Something else here</button></li>
+                    </ul>
+                </div>
                 <div id="myData"> <= SOME DATA SHOULD HAVE BEEN POSTED HERE</div>
-                <br><br><br><br><br><br><br><br><br><br>
-                <br><br><br><br><br><br><br><br><br><br>
-                <br><br><br><br><br><br><br><br><br><br>
+                <p>All of this data has been collected from <a href="https://swapi.dev/" target="_blank" rel="noopener noreferrer">SWAPI</a></p>
+
+
                 <h2 class="contentHeader">Custom buttons</h2>
                 <br><br><br><br><br><br><br><br><br><br>
                 <br><br><br><br><br><br><br><br><br><br>
@@ -109,22 +120,9 @@
                 <br><br><br><br><br><br><br><br><br><br>
                 <br><br><br><br><br><br><br><br><br><br>
                 <br><br><br><br><br><br><br><br><br><br>
-                <h2 class="contentHeader"> This is a new header added trough git.</h2>
             </div>
             
             <nav id="toc" data-toggle="toc" class="d-none d-lg-block col-lg-2 rightSidebar">
-            <!-- <div class="d-none d-lg-block col-lg-2 bd-toc rightSidebar">
-                <a href="#validationForm">Validation form</a>
-                <a href="#technologiesUsed">Authentication form</a>
-                <a href="#">Link#1</a>
-                <a href="#">Link#2</a>
-                <a href="#">Link#3</a>
-                <a href="#">Link#4</a>
-                <a href="#">Link#5</a>
-                <a href="#">Link#6</a>
-                <a href="#">Link#7</a>
-                <a href="#">Link#8</a>
-            </div> -->
             </nav>
         </div>
         <footer class="d-flex flex-row justify-content-center align-items-center footer" id="contact">
@@ -137,32 +135,13 @@
     </div>
 
     <script>
-            const url = 'https://swapi.dev/api/people/1';
-
-            fetch(url)
-                .then(function (response) {
-                    return response.json();
-                })
-                .then(function (data) {
-                    appendData(data);
-                })
-                .catch(function (err) {
-                    console.log('error: ' + err);
-                });
-
-            function appendData(data) {
-                var mainContainer = document.getElementById("myData");
-                var div = document.createElement("div");
-                div.innerHTML = "Name : " + data.name;
-                mainContainer.appendChild(div);
-                
-            }
     </script>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdn.rawgit.com/afeld/bootstrap-toc/v1.0.1/dist/bootstrap-toc.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" 
     integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="script.js"></script>
 </body>
 
 

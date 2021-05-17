@@ -276,18 +276,24 @@ target element has a different background colour than his parent.*/
         padding: auto;
         font-size: 30px;
     }
+
+    .fa:hover {
+        color: rgb(10, 16, 45);
+    }
 }
 
 /* TODO :
-    *REFACTOR ENTIRE CODE WITH BOOTSTRAP 5* 
-    responsive web design
-    style and workout the ins and outs of the right sidebar
-    make sure to add custom margin and padding to content elements because navigation swallows them whole (some sort of fix was applied not enough)
-    start working on a validation form, eventually an about page
-    make proper color styles pointers to colors
-    login form + authentication
-    connect social media to footer (make sure there is something to show before connecting)
+    make a nice little module with the SWAPI api which is going to fetch data from a selected dropdown menu and display the correct
+    information about the selected star wars character.
+    Investigate on how one can do queries and search trough the server for specific stuff like queries for filtering the database.
 
+
+    style and workout the ins and outs of the right sidebar
+    start working on a validation form, eventually an about page (i have some idea on what to put inside of the about page)
+    make proper color styles pointers to colors
+  
+    connect social media to footer (make sure there is something to show before connecting)
+    make readme file for github
     push changes to github
 
 */
