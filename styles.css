@@ -36,7 +36,6 @@ target element has a different background colour than his parent.*/
     background: radial-gradient(circle, rgb(10,16,45) 50%, rgb(242,242,242) 100%);
     height: 500px;
     transition: background-color 1s;
-    z-index: 1;
 }
 
 .hero #code, #with, #integrity, #and, #dedication {
@@ -124,11 +123,13 @@ target element has a different background colour than his parent.*/
     Navigation bar styling
 */
 
+/*z-index is 5 here because i am not sure of the values of certain bootstrap classes z-index value it serves as failsafe */
 .navigationBar {
     background: rgb(10,16,45);
     border-radius: 0px 0px 20px 0px;
     position: sticky;
     top: 0;
+    z-index: 5;
 }
 
 .navigationBar a {
@@ -172,8 +173,44 @@ target element has a different background colour than his parent.*/
 */
 
 .content {
-    padding: 20px 20px 20px 20px;
+    padding: 20px;
     
+}
+
+.basicContainer {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border: 2px solid #f2f2f2;
+}
+
+.swapi {
+    margin: 10px;
+    padding: 10px;
+}
+
+.swapiImage {
+    margin-top: 20px;
+    height: 820px;
+    border: 2px solid black;
+}
+
+.swapiTableStyle {
+    margin-top: 20px;
+    padding: 5px;
+    border: 2px solid red;
+}
+
+.swapiTableDT {
+    border: 2px solid red;
+}
+
+.swapiTableDD {
+    border: 2px solid blue;
+    text-align: center;
+}
+
+.swapiText {
+    border: 2px solid purple;
 }
 
 .contentHeader {
@@ -181,58 +218,94 @@ target element has a different background colour than his parent.*/
 }
 
 /*
+    Styling for the technologies and future plans part of the portfolio
+*/
+
+input[type="checkbox"] {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 80px;
+    width: 160px;
+    z-index: 2;
+}
+
+.technologiesCheckBox {
+    font-family: 'Archivo Black', sans-serif;
+    position: relative;
+    height: 80px;
+    width: 160px;
+    border: 1px solid rgb(10, 16, 45);
+    color: #f2f2f2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 46px;
+    cursor: pointer;
+    box-shadow: -1px -1px 5px rgba(255, 255, 255, 0.2),
+               10px 10px 10px rgba(0, 0, 0, 0.2);
+}
+
+.colorHTML {
+    background-color: orangered;
+}
+
+.colorCSS {
+    background-color: royalblue;
+}
+
+.colorBS {
+    background-color: purple;
+}
+
+.colorJS {
+    background-color: orange;
+}
+
+input[type="checkbox"]:checked ~ div {
+    box-shadow: inset 0 0 1px rgba(255, 255, 255, 0.05),
+            inset 4px 4px 6px rgba(0, 0, 0, 0.2);
+    background: #18191f;         
+    color: yellow;
+    text-shadow: 0 0 5px white;
+    animation: glow 5s linear infinite;
+}
+
+@keyframes glow {
+    0% {
+        filter: hue-rotate(0deg);
+    }
+    100% {
+        filter: hue-rotate(360deg);
+    }
+}
+
+/*
     Right side navigation styling
 */
 
 .rightSidebar{
-    /* margin: 20px 20px 101px 0px; */
-    max-height: 410px;
-    
-    /* border: 1px solid rgb(10, 16, 45); */
-    /* border-radius: 0px 20px 0px 0px; */
-    /* display: flex; */
-    /* flex-direction: column; */
-    /* justify-self: right; */
+    margin-top: 10px;
+    height: 100%;
     position: sticky;
-    top: 100px;
-    /* z-index: 2; */
-    background-color: #f2f2f2;
+    top: 75px;
+    border-left: 1px solid #f2f2f2;
 }
 
-.rightSidebar a {
-    text-decoration: none;
-    padding: 10px 20px;
-    font-size: 16px;
-    border-bottom: 1px solid gray;
+/* Applying custom styling to the ToC plugin*/
+nav[data-toggle=toc] .nav-link.active, nav[data-toggle=toc] .nav-link.active:focus, nav[data-toggle=toc] .nav-link.active:hover {
+    border-left: none;
+    font-weight: normal;
+    padding-left: 20px;
+}
+
+nav[data-toggle=toc] .nav>li>a:focus, nav[data-toggle=toc] .nav>li>a:hover {
+    border: none;
+}
+
+nav[data-toggle=toc] .nav>li>a {
     color: rgb(10, 16, 45);
 }
-
-.rightSidebar a:hover {
-    animation: highlight 3s ease-in-out infinite;
-}
-
-@keyframes highlight {
-    0%  {
-        color: #f2f2f2;       
-    }
-    30% {
-        background-color: rgb(10, 16, 45);
-    }
-    100%{
-        background-color: #f2f2f2;
-        color: rgb(10, 16, 45);
-    }
-}
-
-.rightSidebar a:nth-child(1){
-    border-radius: 0px 20px 0px 0px;
-}
-
-.rightSidebar a:active {
-    background-color: rgb(10, 16, 45);
-    color: red;
-}
-
 
 /*
     Footer styling
@@ -251,7 +324,14 @@ target element has a different background colour than his parent.*/
     font-size: 45px;
     text-decoration: none;
     color: #f2f2f2;
+    transition: color 1s;
 }
+
+.fa:hover {
+    color: rgb(10, 16, 45);
+}
+
+/* Responsive web design */
 
 @media (max-width: 991.98px) { 
     
@@ -265,35 +345,63 @@ target element has a different background colour than his parent.*/
         justify-content: space-around;
     }
 
-    #homeIcon { margin: auto; }
+    #homeIcon {
+        margin: auto;
+    }
+
+    .technologiesCheckBox {
+        font-size: 40px;
+    }
  }
 
- @media (max-width: 359.98px) { 
-    .animatedHeroWords span { font-size: 36px; }
-    .animatedHeroWordsSmallerFont span { font-size: 23px; }
+@media (min-width: 991.98px) {
+    /* p {
+        max-width: 80%;
+    } */
+}
+
+@media (max-width: 767.98px) {
+    .technologiesCheckBox {
+        font-size: 30px;
+    }
+}
+
+@media(max-width: 575.98px) {
+    .technologiesCheckBox {
+        font-size: 40px;
+    }
+
+}
+
+@media (max-width: 359.98px) { 
+    .animatedHeroWords span { 
+        font-size: 36px; 
+    }
+    
+    .animatedHeroWordsSmallerFont span { 
+        font-size: 23px; 
+    }
 
     .fa {
         padding: auto;
         font-size: 30px;
     }
-
-    .fa:hover {
-        color: rgb(10, 16, 45);
-    }
 }
 
 /* TODO :
-    make a nice little module with the SWAPI api which is going to fetch data from a selected dropdown menu and display the correct
+    the issue with the sidebar has been solved although not the right way, further elaboration on the issue needed.
+    navigation bar when under 992px and when active, with dropdown menu, needs to link correctly when prompted to specific anchor and not overlap it.
+    The verbatim used in the p elements in between modules need to be trimmed and either the font or redundant data needs to go.
+    make a nice little module with the SWAPI api which is going to fetch data from a selected dropdown menu and display the correct.
     information about the selected star wars character.
     Investigate on how one can do queries and search trough the server for specific stuff like queries for filtering the database.
+    weird bug appears on right navigation bar whenever page size is changed.
 
-
-    style and workout the ins and outs of the right sidebar
-    start working on a validation form, eventually an about page (i have some idea on what to put inside of the about page)
-    make proper color styles pointers to colors
+    start working on a validation form, eventually an about page (i have some idea on what to put inside of the about page).
+    make proper color styles pointers to colors.
   
-    connect social media to footer (make sure there is something to show before connecting)
-    make readme file for github
-    push changes to github
+    connect social media to footer (make sure there is something to show before connecting).
+    make readme file for github.
+    push changes to github.
 
 */

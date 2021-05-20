@@ -24,6 +24,7 @@
 
 <body data-bs-spy="scroll" data-bs-target="#toc" data-bs-offset="0" tabindex="0">
     <div class="container-fluid">
+        <!-- Hero -->
         <div class="d-flex flex-column justify-content-center align-items-center hero" id="home">
             <div class="user-select-none animatedHeroWords" id="code">
                <span>c</span> 
@@ -68,6 +69,7 @@
             </div>
         </div>
 
+        <!-- Navigation bar -->
         <nav class="navbar navbar-expand-lg navbar-dark navigationBar">
             <a href="#home"><img src="images/code-slash.svg" alt="Home icon" id="homeIcon"></a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
@@ -76,56 +78,133 @@
             <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                 <div class="navbar-nav">
                     <a class="nav-link" href="#home">Home</a>
-                    <a class="nav-link" href="#validationForm">My work</a>
-                    <a class="nav-link" href="#">About</a>
+                    <a class="nav-link" href="#about">About</a>
+                    <a class="nav-link" href="#swapiAPI">My Work</a>
                     <a class="nav-link" href="#contact">Contact</a>
                 </div>
               </div>
             
         </nav>
+
+        <!-- Main content -->
         <div class="row gx-0">
             <div class="col-12 col-lg-10 content">
-                <h2 class="contentHeader" id="validationForm">Validation form</h2>
-                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tenetur consequuntur fuga 
-                    eveniet laborum nobis! Cumque laboriosam nisi non inventore sint blanditiis ipsa eius 
-                    odit explicabo deserunt necessitatibus, quasi, dolorem quibusdam.</p>
+                <h2 class="contentHeader" id="about">About</h2>
+                
+                <!-- About -->
+                <div class="basicContainer">
+                <p>Hello my name is Nemanja, and i am an <i>aspiring</i> web developer.</p>
                 <br><br><br><br><br><br><br><br><br><br>
                 <br><br><br><br><br><br><br><br><br><br>
                 <br><br><br><br><br><br><br><br><br><br>
-                <h2 class="contentHeader" id="">Authentication form</h2>
-                <h3>Pick a character</h3>
-                <div class="dropdown">
-                    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenu2" data-bs-toggle="dropdown" aria-expanded="false">
-                      Dropdown
-                    </button>
-                    <ul class="dropdown-menu" aria-labelledby="dropdownMenu2">
-                      <li><button class="dropdown-item" type="button">Action</button></li>
-                      <li><button class="dropdown-item" type="button">Another action</button></li>
-                      <li><button class="dropdown-item" type="button">Something else here</button></li>
-                    </ul>
                 </div>
-                <div id="myData"> <= SOME DATA SHOULD HAVE BEEN POSTED HERE</div>
-                <p>All of this data has been collected from <a href="https://swapi.dev/" target="_blank" rel="noopener noreferrer">SWAPI</a></p>
+                
+                <!-- SWAPI API -->
+                <h2 class="contentHeader" id="swapiAPI">SWAPI API</h2>
+                <div class="row bg-image swapi basicContainer">
+                                        
+                    <h3 data-toc-skip class="col-6">Pick a character</h3>
+                    <div class="col-6 dropdown">
+                        <select class="form-select" id="starWarsSelectForm" onchange="getSelectedValue()">
+                            <option selected disabled value="0">Select a character</option>
+                            <option value="1">Luke Skywalker</option>
+                            <option value="2">Darth Vader</option>
+                            <option value="3">Yoda</option>
+                            <option value="4">Obi-Wan Kenobi</option>
+                            <option value="5">Sheev Palpatine</option>
+                          </select>
+                    </div>
+                    
+                    <div class="col-6 swapiImage"><img style="display:none" alt="Picture"  id="swapiPicture"></div>
+                    <div class="col-6 swapiTableStyle">
+                    <dl class="row" id="swapiTable">
+                        <dt class="col-sm-3 swapiTableDT">Name: </dt>
+                        <dd class="col-sm-9 swapiTableDD" id="swapiName"></dd>
+                      
+                        <dt class="col-sm-3 swapiTableDT">Height: </dt>
+                        <dd class="col-sm-9 swapiTableDD" id="swapiHeight"></dd>
+                      
+                        <dt class="col-sm-3 swapiTableDT">Hair color: </dt>
+                        <dd class="col-sm-9 swapiTableDD" id="swapiHairColor"></dd>
+                      
+                        <dt class="col-sm-3 swapiTableDT">Skin color: </dt>
+                        <dd class="col-sm-9 swapiTableDD" id="swapiSkinColor"></dd>
+                      
+                        <dt class="col-sm-3 swapiTableDT">Eye color: </dt>
+                        <dd class="col-sm-9 swapiTableDD" id="swapiEyeColor"></dd>
 
+                        <dt class="col-sm-3 swapiTableDT">Birth year: </dt>
+                        <dd class="col-sm-9 swapiTableDD" id="swapiBirthYear"></dd>
+                        
+                        <dt class="col-sm-3 swapiTableDT">Gender: </dt>
+                        <dd class="col-sm-9 swapiTableDD" id="swapiGender"></dd>
 
-                <h2 class="contentHeader">Custom buttons</h2>
+                          </dl>
+                        </dd>
+                      </dl>
+                    
+                    </div>
+
+                    <p class="swapiText">All of this data has been collected from <a href="https://swapi.dev/" target="_blank" rel="noopener noreferrer">SWAPI</a></p>
+                </div>
+
+                <!-- Authentication and validation forms -->
+                <h2 class="contentHeader">Authentication and validation forms</h2>
+                <div class="basicContainer">
                 <br><br><br><br><br><br><br><br><br><br>
                 <br><br><br><br><br><br><br><br><br><br>
                 <br><br><br><br><br><br><br><br><br><br>
-                <h2 class="contentHeader">Custom animations</h2>
-                <br><br><br><br><br><br><br><br><br><br>
-                <br><br><br><br><br><br><br><br><br><br>
-                <br><br><br><br><br><br><br><br><br><br>
-                <h2 class="contentHeader" id="technologiesUsed">Technologies</h2>
-                <br><br><br><br><br><br><br><br><br><br>
-                <br><br><br><br><br><br><br><br><br><br>
-                <br><br><br><br><br><br><br><br><br><br>
+                </div>
+                
+                <!-- Technologies and future plans -->
+                <h2 class="contentHeader" id="technologiesUsed">Technologies and future plans</h2>
+                
+                <p>Technologies used to create this portfolio are displayed below. You can choose to interact with one or several of the element display boxes, 
+                    the ever changing colors are meant to represent that none of these technologies can make up a website on it's own.</p>
+                
+                <div class="basicContainer">
+                    <dl class="row m-2">
+                        <dt class="col-sm-3 p-3 d-flex justify-content-center align-items-center">
+                            <input type="checkbox"/>
+                            <div class="rounded user-select-none technologiesCheckBox colorHTML">HTML</div>
+                        </dt>
+                        <dd class="col-sm-9 p-4">The HyperText Markup Language, or HTML is the standard markup language for documents designed to be displayed in a web browser.</dd>
+                      
+                        <dt class="col-sm-3 p-3 d-flex justify-content-center align-items-center">
+                            <input type="checkbox"/>
+                            <div class="rounded user-select-none technologiesCheckBox colorCSS">CSS3</div>
+                        </dt>
+                        <dd class="col-sm-9 p-4">Cascading Style Sheets is a style sheet language used for describing the presentation of a document written in a markup language such as HTML.</dd>
+                      
+                        <dt class="col-sm-3 p-3 d-flex justify-content-center align-items-center">
+                            <input type="checkbox"/>
+                            <div class="rounded user-select-none technologiesCheckBox colorBS">BS-5</div>
+                        </dt>
+                        <dd class="col-sm-9 p-4">Bootstrap is a free and open-source collection of CSS and JavaScript/jQuery code used for creating dynamic layout websites and web applications.</dd>
+                      
+                        <dt class="col-sm-3 p-3 d-flex justify-content-center align-items-center">
+                            <input type="checkbox"/>
+                            <div class="rounded user-select-none technologiesCheckBox colorJS">JS</div>
+                        </dt>
+                        <dd class="col-sm-9 p-4">JavaScript is a dynamic computer programming language. It is lightweight and most commonly used as a part of web pages.</dd>
+                    </dl>
+                </div>
+                
+                <p class="text-center">
+                    Future plans include adding one or two more modules to this portfolio for one, secondly refactoring this entire webpage into with one of the 'modern' frameworks either vue or react or both. Of course this
+                    webpage has been made 100% by me and the source code is readily available on Github. Link is in the footer.
+                </p>
             </div>
-            
+
+            <!-- Right side navigation bar which uses scroll spy and a bootstrap ToC plugin to dynamically create navigation for displayed content. -->
             <nav id="toc" data-toggle="toc" class="d-none d-lg-block col-lg-2 rightSidebar">
+                <div class="text-center mb-2 border">Table of contents</div>
             </nav>
+
         </div>
-        <footer class="d-flex flex-row justify-content-center align-items-center footer" id="contact">
+        
+        <!-- Footer -->
+        <footer class="d-flex flex-row justify-content-center align-items-center footer user-select-none" id="contact">
             <div>
                 <a href="mailto:nemanja.milan.simic@gmail.com" class="fa fa-envelope"></a>
                 <a href="https://www.linkedin.com/in/nemanja-simi%C4%87-0675bb211/" target="_blank" rel="noopener noreferrer" class="fa fa-linkedin"></a>
