@@ -183,36 +183,6 @@ target element has a different background colour than his parent.*/
     border: 2px solid #f2f2f2;
 }
 
-.swapi {
-    margin: 10px;
-    padding: 10px;
-}
-
-.swapiImage {
-    margin-top: 20px;
-    height: 820px;
-    border: 2px solid black;
-}
-
-.swapiTableStyle {
-    margin-top: 20px;
-    padding: 5px;
-    border: 2px solid red;
-}
-
-.swapiTableDT {
-    border: 2px solid red;
-}
-
-.swapiTableDD {
-    border: 2px solid blue;
-    text-align: center;
-}
-
-.swapiText {
-    border: 2px solid purple;
-}
-
 .contentHeader {
     font-weight: bold;
 }
